@@ -10,7 +10,6 @@ import { Menu, X } from 'lucide-react';
 
 const App: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // Hier wurde 'agb' zum State hinzugefügt
   const [view, setView] = useState<'home' | 'impressum' | 'agb'>('home');
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -21,7 +20,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col lg:flex-row overflow-x-hidden">
-      {/* Mobile Top Header */}
+      
+      {/* 1. MOBILE HEADER (Oben am Handy) */}
       <header className="lg:hidden sticky top-0 z-50 bg-white border-b border-gray-100 flex items-center justify-between px-6 py-4 w-full">
         <button 
           onClick={() => {
@@ -32,15 +32,24 @@ const App: React.FC = () => {
         >
           Modern <span className="text-[#31e9e9]">Services</span>
         </button>
-        <button onClick={toggleMenu} className="p-2 text-[#2d2d2d]">
+        <button onClick={toggleMenu} className="p-2 text-[#2d2d2d] hover:bg-gray-50 rounded-lg">
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </header>
 
-      {/* Sidebar Navigation */}
-      <div className={`
-        fixed inset-0 z-40 lg:z-auto lg:relative lg:block transition-transform duration-300 ease-in-out
-        ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+      {/* 2. SIDEBAR NAVIGATION */}
+      {/* Dunkler Hintergrund wenn Menü offen (Mobile) */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      <aside className={`
+        fixed inset-y-0 left-0 z-50 w-64 bg-white transform transition-transform duration-300 ease-in-out
+        lg:translate-x-0 lg:static lg:inset-0
+        ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <Sidebar 
           closeMenu={() => setIsMobileMenuOpen(false)} 
@@ -49,23 +58,31 @@ const App: React.FC = () => {
             setIsMobileMenuOpen(false);
           }} 
         />
-      </div>
+      </aside>
 
-      {/* Main Content Area */}
-      <main className="flex-1 w-full lg:ml-[250px] transition-all duration-300">
+      {/* 3. MAIN CONTENT AREA */}
+      <main className="flex-1 w-full min-w-0 transition-all duration-300">
         {view === 'home' ? (
-          <>
+          <div className="flex flex-col w-full">
             <section id="start"><Hero /></section>
             <section id="ueber-uns"><About /></section>
             <section id="angebot"><Offerings /></section>
             <section id="termin"><Booking /></section>
-          </>
+          </div>
         ) : (
-          <div className="w-full min-h-screen">
-            {/* Hier wird je nach Ansicht der Inhalt getauscht */}
-            {view === 'impressum' ? <Legal /> : <div className="p-24 text-center">Hier folgen bald deine AGB Texte...</div>}
+          <div className="w-full min-h-screen flex flex-col">
+            <div className="flex-1">
+              {view === 'impressum' ? (
+                <Legal />
+              ) : (
+                <div className="p-10 md:p-24 text-center text-gray-500">
+                  <h2 className="text-2xl font-bold mb-4">AGB</h2>
+                  <p>Hier folgen bald deine AGB Texte...</p>
+                </div>
+              )}
+            </div>
             
-            <div className="px-6 md:px-12 lg:px-24 pb-20">
+            <div className="px-6 md:px-12 lg:px-24 pb-12">
               <button 
                 onClick={() => setView('home')}
                 className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2"
@@ -76,7 +93,6 @@ const App: React.FC = () => {
           </div>
         )}
         
-        {/* Footer ohne umschließendes div, damit die Buttons einzeln klicken können */}
         <Footer onNavigate={(target) => setView(target)} />
       </main>
     </div>
