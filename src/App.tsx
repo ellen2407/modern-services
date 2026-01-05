@@ -22,18 +22,20 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col lg:flex-row w-full overflow-x-hidden">
       
-      {/* 1. MOBILE HEADER - Fixiert auf volle Breite */}
-      <header className="lg:hidden sticky top-0 z-50 bg-white border-b border-gray-100 w-full">
-        <div className="flex items-center justify-between px-6 py-4 w-full">
-          <button 
-            onClick={() => {
-              setView('home');
-              setIsMobileMenuOpen(false);
-            }} 
-            className="font-bold text-xl tracking-tight text-[#2d2d2d] whitespace-nowrap"
-          >
-            Modern <span className="text-[#31e9e9]">Services</span>
-          </button>
+      {/* 1. MOBILE HEADER - ULTRA ROBUST FIX */}
+      <header className="lg:hidden sticky top-0 z-50 bg-white border-b border-gray-100 w-full left-0 right-0">
+        <div className="flex items-center justify-between px-6 py-4 w-full box-border">
+          <div className="flex-1">
+            <button 
+              onClick={() => {
+                setView('home');
+                setIsMobileMenuOpen(false);
+              }} 
+              className="font-bold text-xl tracking-tight text-[#2d2d2d] whitespace-nowrap"
+            >
+              Modern <span className="text-[#31e9e9]">Services</span>
+            </button>
+          </div>
           
           <button 
             onClick={toggleMenu} 
@@ -46,7 +48,6 @@ const App: React.FC = () => {
       </header>
 
       {/* 2. SIDEBAR NAVIGATION */}
-      {/* Overlay für Mobile: Schließt Menü bei Klick daneben */}
       {isMobileMenuOpen && (
         <div 
           className="fixed inset-0 bg-black/40 z-40 lg:hidden" 
@@ -61,7 +62,7 @@ const App: React.FC = () => {
       `}>
         <Sidebar 
           closeMenu={() => setIsMobileMenuOpen(false)} 
-          onNavigate={(target) => {
+          onNavigate={(target: any) => {
             if (target === 'home' || target === 'impressum' || target === 'agb') {
               setView(target);
             } else {
@@ -105,8 +106,8 @@ const App: React.FC = () => {
           </div>
         )}
         
-        {/* Footer */}
-        <Footer onNavigate={(target): any => setView(target)} />
+        {/* Footer - fixed any type error */}
+        <Footer onNavigate={(target: any) => setView(target)} />
       </main>
     </div>
   );
