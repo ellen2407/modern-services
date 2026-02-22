@@ -1,13 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Dieser Teil verhindert, dass die Seite nach rechts wackelt oder abgeschnitten wird */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
