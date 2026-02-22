@@ -18,12 +18,12 @@ jobs:
            chmod +x node_modules/.bin/vite
           npm run build
 
-      - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SSH
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 65002 # <--- WICHTIG: Port aus eurem SSH-Screenshot!
-          local-dir: ./dist/
-          server-dir: ./public_html/
+          server: ${{ secrets.HOST }}
+          port: 65002
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: ./dist/*
+          remote_path: /home/u268578894/domains/modern-its.de/public_html/
