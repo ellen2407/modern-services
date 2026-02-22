@@ -15,15 +15,16 @@ jobs:
       - name: Install & Build
         run: |
           npm install
-           chmod +x node_modules/.bin/vite
+          chmod +x node_modules/.bin/vite
           npm run build
 
       - name: Deploy via SSH
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          username: ${{ secrets.USER }}
-          server: ${{ secrets.HOST }}
-          port: 65002
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: ./dist/*
-          remote_path: /home/u268578894/domains/modern-its.de/public_html/
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          REMOTE_PORT: "65002"
+          SOURCE: "dist/"
+          TARGET: "/home/u268578894/domains/modern-its.de/public_html/"
