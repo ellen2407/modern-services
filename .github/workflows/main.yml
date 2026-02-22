@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main  # Überprüft, ob euer Haupt-Branch wirklich 'main' heißt
+      - main
 
 jobs:
   build-and-deploy:
@@ -17,12 +17,11 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy via SSH
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USER }}
-          TARGET: ${{ secrets.TARGET }}
-          SOURCE: "dist/" # <--- HIER anpassen, falls es 'build/' sein muss!
-          ARGS: "-avzr --delete"
+      - name: Deploy via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.FTP_PASSWORD }} # <--- Neues Secret!
+          local-dir: ./dist/
+          server-dir: ./public_html/
