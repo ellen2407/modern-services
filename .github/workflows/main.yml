@@ -25,6 +25,5 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 65002 # <--- WICHTIG: Port aus eurem SSH-Screenshot!
-          protocol: sftp # <--- Explizit SFTP nutzen
           local-dir: ./dist/
           server-dir: ./public_html/
