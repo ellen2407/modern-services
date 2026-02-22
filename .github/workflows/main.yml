@@ -15,6 +15,7 @@ jobs:
       - name: Install & Build
         run: |
           npm install
+           chmod +x node_modules/.bin/vite
           npm run build
 
       - name: Deploy via SFTP
