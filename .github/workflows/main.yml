@@ -1,0 +1,28 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Überprüft, ob euer Haupt-Branch wirklich 'main' heißt
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy via SSH
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          TARGET: ${{ secrets.TARGET }}
+          SOURCE: "dist/" # <--- HIER anpassen, falls es 'build/' sein muss!
+          ARGS: "-avzr --delete"
