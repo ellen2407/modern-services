@@ -57,7 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, onNavigate }) => {
       </nav>
 
       <div className="pt-8 border-t border-gray-50 text-[10px] text-gray-400">
-        <p>© 2024 Modern Services GmbH</p>
+        <p>© 2026 Modern IT Services UG (haftungsbeschränkt)</p>
         <p>Straßlach-Dingharting</p>
       </div>
     </div>

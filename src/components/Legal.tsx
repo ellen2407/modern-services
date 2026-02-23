@@ -13,7 +13,7 @@ const Legal: React.FC = () => {
               Angaben gemäß § 5 TMG
             </h2>
             <p className="mt-2">
-              Modern Services GmbH<br />
+              Modern IT Services UG (haftungsbeschränkt)<br />
               Gewerbestr. 13<br />
               82064 Straßlach-Dingharting
             </p>

@@ -9,7 +9,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     <footer className="bg-gray-50 py-12 px-6 md:px-12 lg:px-24 border-t border-gray-100">
       <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
         <div className="text-gray-500 text-sm">
-          © 2024 Modern Services GmbH. Alle Rechte vorbehalten.
+          © 2026 Modern IT Services UG (haftungsbeschränkt). Alle Rechte vorbehalten.
         </div>
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           <button 

@@ -26,7 +26,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-[#2d2d2d]">
-              Die Modern Services GmbH ist ein bayerisches Familienunternehmen mit Sitz in Straßlach-Dingharting. Seit unserer Gründung im Jahr 2022 haben wir es uns zur Herzensaufgabe gemacht, die über Jahrzehnte aufgebauten Lebenswerke von Unternehmern zu bewahren.
+              Die Modern IT Services UG (haftungsbeschränkt) ist ein bayerisches Familienunternehmen mit Sitz in Straßlach-Dingharting. Seit unserer Gründung im Jahr 2022 haben wir es uns zur Herzensaufgabe gemacht, die über Jahrzehnte aufgebauten Lebenswerke von Unternehmern zu bewahren.
             </p>
             <p className="text-lg leading-relaxed text-[#2d2d2d]">
               Wir verstehen, dass eine Unternehmensnachfolge mehr ist als nur ein geschäftlicher Prozess – es ist die Übergabe eines Vermächtnisses. Besonders dort, wo die familiäre Nachfolge fehlt, schlagen wir mit Empathie und Fachkompetenz die Brücke zwischen den Generationen, um Ihr Unternehmen erfolgreich in die Zukunft zu führen.
