@@ -88,9 +88,49 @@ const Legal: React.FC = () => {
             </p>
           </div>
         </div>
+        {/* --- START DATENSCHUTZ --- */}
+        <div className="pt-16 mt-16 border-t-2 border-gray-100">
+            <h1 className="text-4xl font-bold mb-10 text-[#2d2d2d] tracking-tight">Datenschutzerklärung</h1>
+            
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">1. Datenschutz auf einen Blick</h2>
+                <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">2. Hosting</h2>
+                <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+                <h3 className="font-bold mt-4">Hostinger</h3>
+                <p>Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Zypern. Details entnehmen Sie der Datenschutzerklärung von Hostinger: https://www.hostinger.de/datenschutz.</p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">3. Verantwortliche Stelle</h2>
+                <p className="mt-2">
+                  Modern IT Services UG (haftungsbeschränkt)<br />
+                  Gewerbestr. 13<br />
+                  82064 Straßlach-Dingharting<br />
+                  E-Mail: admin@modern-its.de
+                </p>
+                <h3 className="font-bold mt-6 text-[#2d2d2d]">Datenschutzbeauftragter</h3>
+                <p className="mt-2">
+                  Maximilian Rabauer<br />
+                  E-Mail: admin@modern-its.de
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">4. Datenerfassung & Rechte</h2>
+                <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
+              </div>
+            </div>
+          </div>
+          {/* --- ENDE DATENSCHUTZ --- */}
       </div>
     </section>
   );
 };
+
 
 export default Legal;
