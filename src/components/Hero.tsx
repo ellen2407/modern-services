@@ -18,14 +18,14 @@ const Hero: React.FC = () => {
           Ihr Lebenswerk in erfahrenen Händen.
         </h1>
         <p className="text-xl md:text-2xl text-gray-500 max-w-2xl leading-relaxed mb-12">
-          Professionelle Begleitung bei der Unternehmensnachfolge für Käufer und Verkäufer. Wir bewahren Werte, wenn die familiäre Nachfolge fehlt.
+          Professionelle Begleitung bei der Unternehmensnachfolge - für Käufer und Verkäufer. Wir bewahren Werte und schaffen nachhaltige Übergänge.
         </p>
         <button
           onClick={handleCta}
           className="bg-gradient-to-r from-[#52e3fe] to-[#31e9e9] text-[#2d2d2d] font-semibold py-4 px-8 rounded-none flex items-center gap-3 hover:shadow-lg hover:shadow-[#52e3fe]/20 transition-all active:scale-95 whitespace-nowrap"
           style={{ padding: '16px 32px' }}
         >
-          jetzt kostenloses Orientierungsgespräch vereinbaren
+          Jetzt kostenloses Orientierungsgespräch vereinbaren
           <ArrowRight size={20} />
         </button>
       </div>
