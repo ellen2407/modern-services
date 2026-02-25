@@ -12,7 +12,7 @@ import PferdeSammlerLegal from './components/pferdesammler/PferdeSammlerLegal';
 import PferdeSammlerDatenschutz from './components/pferdesammler/PferdeSammlerDatenschutz';
 import PferdeSammlerNutzungsbedingungen from './components/pferdesammler/PferdeSammlerNutzungsbedingungen';
 
-// Diese kleine Hilfskomponente sorgt dafür, dass wir überall navigieren können
+// Hilfskomponente für die gesamte Logik
 const AppContent: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -77,69 +77,65 @@ const AppContent: React.FC = () => {
             </div>
           } />
 
-          {/* IMPRESSUM / DATENSCHUTZ */}
+          {/* STANDARTE SEITEN */}
           <Route path="/legal" element={
-            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+            <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="flex-1"><Legal /></div>
               <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
                   ← Zurück zur Startseite
                 </button>
               </div>
             </div>
           } />
 
-          {/* AGB PLATZHALTER */}
           <Route path="/agb" element={
-            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
-              <div className="p-10 md:p-24 text-center text-gray-500">
+            <div className="w-full min-h-screen flex flex-col bg-white">
+              <div className="p-10 md:p-24 text-center text-gray-500 flex-1">
                 <h2 className="text-2xl font-bold mb-4 text-[#2d2d2d]">Allgemeine Geschäftsbedingungen</h2>
                 <p>Hier folgen in Kürze Ihre AGB Texte...</p>
               </div>
               <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
                   ← Zurück zur Startseite
                 </button>
               </div>
             </div>
           } />
 
-          {/* IMPRESSUM PferdeSammler */}
+          {/* PFERDESAMMLER APP SPEZIFISCH */}
           <Route path="/pferdesammler-legal" element={
-            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+            <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="flex-1"><PferdeSammlerLegal /></div>
               <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
                   ← Zurück zur Startseite
                 </button>
               </div>
             </div>
           } />
 
-          {/* DATENSCHUTZ PferdeSammler */}
           <Route path="/pferdesammler-datenschutz" element={
-            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+            <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="flex-1"><PferdeSammlerDatenschutz /></div>
               <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
                   ← Zurück zur Startseite
                 </button>
               </div>
             </div>
           } />
 
-          {/* NUTZUNGSBEDINGUNGEN PferdeSammler */}
-          <Route path="/pferdesammler-nutzungsbedingungen" element={
-            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+          <Route path="/pferdesammler-agb" element={
+            <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="flex-1"><PferdeSammlerNutzungsbedingungen /></div>
               <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
                   ← Zurück zur Startseite
                 </button>
               </div>
             </div>
           } />
-
         </Routes>
         
         <Footer onNavigate={handleNavigation} />
@@ -148,7 +144,6 @@ const AppContent: React.FC = () => {
   );
 };
 
-// Das ist der neue Einstiegspunkt
 const App: React.FC = () => {
   return (
     <Router>
