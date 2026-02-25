@@ -8,6 +8,9 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 import Legal from './components/Legal';
 import { Menu, X } from 'lucide-react';
+import PferdeSammlerLegal from './components/pferdesammler/PferdeSammlerLegal';
+import PferdeSammlerDatenschutz from './components/pferdesammler/PferdeSammlerDatenschutz';
+import PferdeSammlerNutzungsbedingungen from './components/pferdesammler/PferdeSammlerNutzungsbedingungen';
 
 // Diese kleine Hilfskomponente sorgt dafür, dass wir überall navigieren können
 const AppContent: React.FC = () => {
@@ -58,7 +61,7 @@ const AppContent: React.FC = () => {
         <div className="fixed inset-0 bg-black/40 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />
       )}
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white transform transition-transform duration-300 ease-in-out border-r border-gray-100 lg:translate-x-0 lg:static lg:inset-0 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <Sidebar closeMenu={() => setIsMobileMenuOpen(false)} onNavigate={handleNavigation} />
+        <Sidebar closeMenu={() => setIsMobileMenuOpen(false)} onNavigate={() => handleNavigation('home')} />
       </aside>
 
       {/* 3. MAIN CONTENT AREA */}
@@ -100,6 +103,43 @@ const AppContent: React.FC = () => {
               </div>
             </div>
           } />
+
+          {/* IMPRESSUM PferdeSammler */}
+          <Route path="/pferdesammler-legal" element={
+            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+              <div className="flex-1"><PferdeSammlerLegal /></div>
+              <div className="px-6 md:px-12 lg:px-24 pb-12">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                  ← Zurück zur Startseite
+                </button>
+              </div>
+            </div>
+          } />
+
+          {/* DATENSCHUTZ PferdeSammler */}
+          <Route path="/pferdesammler-datenschutz" element={
+            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+              <div className="flex-1"><PferdeSammlerDatenschutz /></div>
+              <div className="px-6 md:px-12 lg:px-24 pb-12">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                  ← Zurück zur Startseite
+                </button>
+              </div>
+            </div>
+          } />
+
+          {/* NUTZUNGSBEDINGUNGEN PferdeSammler */}
+          <Route path="/pferdesammler-nutzungsbedingungen" element={
+            <div className="w-full min-h-screen flex flex-col bg-gray-50/30">
+              <div className="flex-1"><PferdeSammlerNutzungsbedingungen /></div>
+              <div className="px-6 md:px-12 lg:px-24 pb-12">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2 transition-all">
+                  ← Zurück zur Startseite
+                </button>
+              </div>
+            </div>
+          } />
+
         </Routes>
         
         <Footer onNavigate={handleNavigation} />
