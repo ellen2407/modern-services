@@ -4,7 +4,7 @@ import { CheckCircle, Shield, Code, Cpu, User } from 'lucide-react';
 
 const About: React.FC = () => {
   const certificates = [
-    { icon: <CheckCircle className="text-[#31e9e9]" size={20} />, text: 'IHK-zertifizierte Berater für Unternehmensnachfolge' },
+    { icon: <CheckCircle className="text-[#31e9e9]" size={20} />, text: 'Berater für Unternehmensnachfolge' },
     { icon: <Shield className="text-[#31e9e9]" size={20} />, text: 'Projektmanagement klassisch, agil & hybrid' },
     { icon: <Cpu className="text-[#31e9e9]" size={20} />, text: 'Prozessanalyse & -automatisierung: UIPath certified RPA Developer' },
     { icon: <Code className="text-[#31e9e9]" size={20} />, text: 'ISTQB Certified Advanced Level Testmanager' },
