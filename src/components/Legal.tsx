@@ -25,7 +25,7 @@ const Legal: React.FC = () => {
           
           {/* Vertretung */}
           <div>
-            <h2 className="text-xl font-bold text-[#2d2d2d] mb-2">Vertreten durch</h2>
+            <h2 className="text-xl font-bold text-[#2d2d2d] mb-2">Vertreten durch die Geschäftsführer</h2>
             <p>Maximilian Rabauer, Heinz Rabauer</p>
           </div>
 
