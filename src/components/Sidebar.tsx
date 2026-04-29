@@ -10,7 +10,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, onNavigate }) => {
     { id: 'start', label: 'Start' },
     { id: 'ueber-uns', label: 'Über uns' },
     { id: 'angebot', label: 'Unser Angebot' },
-    { id: 'termin', label: 'Termin buchen' },
+    { id: 'termin', label: 'Vertraulicher Kontakt' },
   ];
 
   const handleNavClick = (id: string) => {
