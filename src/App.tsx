@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Offerings from './components/Offerings';
-import Booking from './components/Booking';
 import Footer from './components/Footer';
 import Legal from './components/Legal';
 import { Menu, X } from 'lucide-react';
@@ -73,7 +72,6 @@ const AppContent: React.FC = () => {
               <section id="start"><Hero /></section>
               <section id="ueber-uns"><About /></section>
               <section id="angebot"><Offerings /></section>
-              <section id="termin"><Booking /></section>
             </div>
           } />
 
