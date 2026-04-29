@@ -10,7 +10,7 @@ const Legal: React.FC = () => {
           {/* Firmenangaben */}
           <div>
             <h2 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">
-              Angaben gemäß § 5 TMG
+              Angaben gemäß § 5 DDG
             </h2>
             <p className="mt-2">
               Modern IT Services UG (haftungsbeschränkt)<br />
