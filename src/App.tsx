@@ -89,6 +89,17 @@ const AppContent: React.FC = () => {
             </div>
           } />
 
+          <Route path="/pferdesammler" element={
+            <div className="w-full min-h-screen flex flex-col bg-white">
+              <div className="flex-1"><PferdeSammlerNutzungsbedingungen /></div>
+              <div className="px-6 md:px-12 lg:px-24 pb-12">
+                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
+                  ← Zurück zur Startseite
+                </button>
+              </div>
+            </div>
+          } />
+
           <Route path="/agb" element={
             <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="p-10 md:p-24 text-center text-gray-500 flex-1">
