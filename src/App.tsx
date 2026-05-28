@@ -8,8 +8,6 @@ import Kontaktformular from './components/Kontaktformular';
 import Footer from './components/Footer';
 import Legal from './components/Legal';
 import { Menu, X } from 'lucide-react';
-import PferdeSammlerLegal from './components/pferdesammler/PferdeSammlerLegal';
-import PferdeSammlerDatenschutz from './components/pferdesammler/PferdeSammlerDatenschutz';
 import PferdeSammlerNutzungsbedingungen from './components/pferdesammler/PferdeSammlerNutzungsbedingungen';
 
 // Hilfskomponente für die gesamte Logik
@@ -115,28 +113,6 @@ const AppContent: React.FC = () => {
           } />
 
           {/* PFERDESAMMLER APP SPEZIFISCH */}
-          <Route path="/pferdesammler-legal" element={
-            <div className="w-full min-h-screen flex flex-col bg-white">
-              <div className="flex-1"><PferdeSammlerLegal /></div>
-              <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
-                  ← Zurück zur Startseite
-                </button>
-              </div>
-            </div>
-          } />
-
-          <Route path="/pferdesammler-datenschutz" element={
-            <div className="w-full min-h-screen flex flex-col bg-white">
-              <div className="flex-1"><PferdeSammlerDatenschutz /></div>
-              <div className="px-6 md:px-12 lg:px-24 pb-12">
-                <button onClick={() => navigate('/')} className="text-[#31e9e9] font-bold hover:underline flex items-center gap-2">
-                  ← Zurück zur Startseite
-                </button>
-              </div>
-            </div>
-          } />
-
           <Route path="/pferdesammler-agb" element={
             <div className="w-full min-h-screen flex flex-col bg-white">
               <div className="flex-1"><PferdeSammlerNutzungsbedingungen /></div>

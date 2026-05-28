@@ -1,0 +1,223 @@
+Bitte hier den finalen Datenschutz-Text für die Seite /pferdesammler einfügen.
+# Datenschutzerklärung – Pferdesammler-App
+
+> Verantwortlicher: **Modern IT Services UG (haftungsbeschränkt)**
+
+---
+
+## 1. Verantwortliche Stelle
+
+**Modern IT Services UG (haftungsbeschränkt)**  
+Gewerbestr. 13  
+82064 Straßlach-Dingharting  
+Deutschland  
+
+Telefon: 0172 3153329  
+E-Mail: pferdesammler@modern-its.de  
+Web: modern-its.de
+
+---
+
+## 2. Überblick — was diese App tut
+
+Pferdesammler ist eine Android-App, mit der Nutzerinnen und Nutzer Pferde fotografieren, deren Rasse per künstlicher Intelligenz bestimmen lassen und in einem digitalen Sammelalbum speichern können.
+
+Dabei werden verschiedene personenbezogene Daten erhoben und verarbeitet. Diese Erklärung informiert dich darüber, welche Daten wir erheben, zu welchem Zweck und an wen wir sie weitergeben.
+
+---
+
+## 3. Welche Daten wir erheben
+
+### 3.1 Konto- und Anmeldedaten
+
+Wenn du ein Konto erstellst (per E-Mail oder Google-Login), speichern wir:
+
+- E-Mail-Adresse
+- Benutzername (selbst gewählt)
+- Zeitpunkt der Registrierung
+- Authentifizierungsanbieter (E-Mail oder Google)
+
+**Zweck:** Bereitstellung des Nutzerkontos, Authentifizierung, Kontozuordnung der Sammlung.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)
+
+### 3.2 Sammlung und Scan-Daten
+
+Wenn du ein Pferd scannst und die Rasse erkannt wird, speichern wir:
+
+- Erkannte Pferderasse (ID und Name)
+- Zeitpunkt des Scans
+- Optional: GPS-Koordinaten des Scan-Ortes (nur wenn Standortberechtigung erteilt)
+- Optional: Manuell eingegebener Ortsname
+- Lokal auf deinem Gerät: das aufgenommene Foto (nicht auf unseren Servern)
+
+**Zweck:** Aufbau und Pflege deines persönlichen Sammelalbums, Statistiken und Trophäen.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO
+
+### 3.3 Foto-Analyse durch KI (Rassebestimmung)
+
+Das von dir aufgenommene oder aus der Galerie gewählte Foto wird zur Rassebestimmung an unsere Backend-Infrastruktur übermittelt. Dort wird es an OpenAI (USA) zur KI-gestützten Analyse weitergeleitet. Das Foto wird ausschließlich zur Rassebestimmung verarbeitet und nicht dauerhaft bei OpenAI gespeichert.
+
+Wichtiger Hinweis: Die App ist ausschließlich für die Aufnahme von Pferden gedacht. Eine automatische Filterung von Gesichtern findet nicht statt. Bitte achte darauf, dass auf den Fotos keine Personen (Gesichter) zu erkennen sind. Sollten dennoch personenbezogene Hintergrunddaten (z. B. Gesichter von Passanten) auf dem Foto sein, werden diese im Rahmen der Einwilligung mitverarbeitet.
+
+Die Übermittlung an OpenAI erfolgt auf Basis eines Auftragsverarbeitungsvertrages (AVV) inklusive EU-Standardvertragsklauseln (Standard Contractual Clauses, SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, ergänzt durch zusätzliche technische Sicherheitsmaßnahmen und eine Risikoanalyse (Transfer Impact Assessment). Vertragspartner für Nutzer aus dem EWR ist OpenAI Ireland Ltd. OpenAI nutzt API-Daten laut Vertrag nicht zum Training eigener Modelle.
+
+**Zweck:** Automatische Bestimmung der Pferderasse.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO (ausdrückliche Einwilligung); Drittlandübertragung gemäß Art. 46 Abs. 2 lit. c DSGVO. Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (z. B. durch Deaktivierung der Funktion in den App-Einstellungen oder Löschung des Accounts), wobei die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung unberührt bleibt.
+
+
+### 3.4 Standortdaten
+
+Wenn du die Standortberechtigung erteilst, wird beim Scan dein ungefährer GPS-Standort gespeichert (Breiten- und Längengrad). Die Nutzung der Standortfunktion ist **freiwillig** und kann jederzeit in den App-Einstellungen deaktiviert werden. Eine genaue Adresse wird nicht gespeichert.
+
+**Zweck:** Anzeige des Fundorts in deiner Sammlung; spätere Kartenansicht (geplant für Version 2).  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+
+### 3.5 Nutzungsdaten und Absturzberichte
+
+Wenn du uns hierzu deine ausdrückliche Einwilligung erteilt hast, senden wir bei App-Abstürzen Fehlerdaten an Sentry (USA), um die Stabilität unserer App kontinuierlich zu verbessern. Das Absturz-Reporting ist standardmäßig deaktiviert (Opt-in) und startet erst, wenn du der Aktivierung aktiv zustimmst. Du kannst diese Einwilligung jederzeit mit Wirkung für die Zukunft in den App-Einstellungen (Einstellungen → Absturzberichte) widerrufen.
+
+**Technische Schutzmaßnahmen:**
+- Sentry wird erst nach Prüfung deiner Einwilligung initialisiert. Liegt keine Einwilligung vor, wird Sentry nicht gestartet und es werden keinerlei Daten an Sentry übermittelt.
+- `sendDefaultPii: false` — IP-Adressen und andere gerätebezogene Standarddaten werden nicht automatisch übermittelt.
+- Performance-Tracing (HTTP-Request-Tracking) ist deaktiviert (`tracesSampleRate: 0`).
+
+Folgende Daten werden im Falle eines Absturzes übermittelt:
+- Fehlermeldung und Stack Trace (technischer Fehlercode)
+- App-Version und Betriebssystem (Android, OS-Version)
+- Anonymisierte Nutzer-ID (erste 8 Zeichen der internen UUID, kein Klarname, keine E-Mail)
+- Zeitstempel und die letzten technischen Screen-Namen
+
+**Zweck:** Fehlerbehebung und Verbesserung der App-Stabilität.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG (ausdrückliche Einwilligung).
+
+
+### 3.6 Abonnement- und Zahlungsdaten
+
+Wenn du ein Premium-Abonnement abschließt, erfolgt die Zahlung ausschließlich über den **Google Play Store**. Wir erhalten von Google lediglich eine Bestätigung über den Abo-Status (aktiv/abgelaufen), keine Zahlungsdaten wie Kreditkartennummern.
+
+Die Abo-Verwaltung (Typ, Laufzeit, Verlängerungsstatus) wird über **RevenueCat** (USA) abgewickelt, die uns nur den aktuellen Entitlement-Status mitteilen. In unserer Datenbank speichern wir:
+
+- Abo-Status (`free` oder `premium`)
+- Abo-Ende (`premium_bis`)
+- Abo-Typ (monatlich oder jährlich)
+- Automatische Verlängerung aktiv (ja/nein)
+
+**Zweck:** Freischaltung und Verwaltung des Premium-Zugangs.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO
+
+### 3.7 Gast-Nutzung (ohne Konto)
+
+Du kannst die App ohne Registrierung als Gast nutzen — **nach bestandener Altersabfrage beim ersten App-Start** (siehe Abschnitt 8). Dabei wird eine anonyme temporäre Sitzung erstellt. Scan-Ergebnisse werden dabei **maximal 24 Stunden** gespeichert und danach automatisch gelöscht. Es erfolgt keine direkte Identifizierung (kein Name, keine E-Mail); die Session ist pseudonym.
+
+**Zweck:** Nutzung der App ohne Registrierungshürde.  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO
+
+---
+
+## 4. Drittanbieter und Datenübermittlung
+
+Zur Bereitstellung der App-Funktionen und zur Erfüllung unserer Verträge arbeiten wir mit spezialisierten Drittanbietern zusammen. Eine Weitergabe deiner Daten erfolgt nur zu den nachfolgend genannten Zwecken und auf Basis der aufgeführten Rechts- und Transfergrundlagen:
+
+- **Supabase Inc.** (Sitz: EU-Region, Hosting in Frankfurt am Main)  
+  **Zweck:** Bereitstellung der Datenbank, Nutzer-Authentifizierung und allgemeine Backend-Funktionen.  
+  **Transfer-Grundlage:** Kein Drittlandtransfer, da die Daten ausschließlich in der EU gespeichert und verarbeitet werden.  
+  **Datenschutzerklärung:** supabase.com/privacy
+
+- **OpenAI Ireland Ltd.** (Sitz: Irland / USA)  
+  **Zweck:** KI-gestützte Rassebestimmung durch automatische Bildanalyse.  
+  **Transfer-Grundlage:** Auftragsverarbeitungsvertrag (AVV) sowie EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, ergänzt durch zusätzliche technische und organisatorische Sicherheitsmaßnahmen sowie eine fundierte Risikoanalyse (Transfer Impact Assessment).  
+  **Datenschutzerklärung:** openai.com/policies/eu-privacy-policy
+
+- **RevenueCat, Inc.** (Sitz: USA)  
+  **Zweck:** Verwaltung von Premium-Abonnements und Abwicklung des Berechtigungsstatus (Billing-Infrastruktur).  
+  **Transfer-Grundlage:** Auftragsverarbeitungsvertrag (AVV) und EU-Standardvertragsklauseln (SCC).  
+  **Datenschutzerklärung:** revenuecat.com/privacy
+
+- **Functional Software, Inc. (Sentry)** (Sitz: USA)  
+  **Zweck:** Erfassung anonymisierter Absturzberichte (ausschließlich auf Basis deiner vorherigen ausdrücklichen Einwilligung).  
+  **Transfer-Grundlage:** Zertifiziert unter dem EU-US Data Privacy Framework (DPF) sowie EU-Standardvertragsklauseln (SCC) als Fallback.  
+  **Datenschutzerklärung:** sentry.io/privacy
+
+- **Plus Five Five, Inc. (Resend)** (Sitz: USA)  
+  **Zweck:** Technischer Versand von System-E-Mails (z. B. Bestätigung zur Account-Löschung oder Passwort-Zweck).  
+  **Transfer-Grundlage:** Auftragsverarbeitungsvertrag (AVV) und EU-Standardvertragsklauseln (SCC).  
+  **Datenschutzerklärung:** resend.com/security/gdpr
+
+- **Google LLC** (Sitz: USA)  
+  **Zweck:** Bereitstellung des Google-Logins (OAuth) sowie Abwicklung der Zahlungen über Google Play Billing.  
+  **Transfer-Grundlage:** Zertifiziert unter dem EU-US Data Privacy Framework (DPF).  
+  **Datenschutzerklärung:** policies.google.com/privacy
+
+Hinweise zu den Transfermechanismen in Drittländer: Die Anbieter Google und Sentry sind im EU-US Data Privacy Framework (DPF) zertifiziert, welches von der EU-Kommission als Angemessenheitsbeschluss für ein sicheres Datenschutzniveau anerkannt ist. OpenAI stützt sich für Nutzer aus dem EWR auf EU-Standardvertragsklauseln über die OpenAI Ireland Ltd. als Vertragspartner; eine separate DPF-Zertifizierung von OpenAI OpCo LLC besteht nach aktuellem Stand nicht. RevenueCat und Resend gewährleisten das Datenschutzniveau ebenfalls über vertraglich bindende EU-Standardvertragsklauseln.
+
+
+---
+
+## 5. Speicherdauer
+
+Wir speichern deine personenbezogenen Daten nur so lange, wie es für die Erreichung der genannten Zwecke erforderlich ist oder wie es die gesetzlichen Aufbewahrungsfristen (z. B. aus dem Handels- oder Steuerrecht) vorschreiben. Sobald der Zweck entfällt, werden die Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gelöscht.
+
+Im Detail gelten folgende Speicherfristen:
+
+- **Konto- und Sammlungsdaten:** Diese Daten (inklusive deines Abo-Status und der gesammelten Pferde) speichern wir bis zur vollständigen Löschung deines Nutzerkontos. Du kannst dein Konto jederzeit selbst in den App-Einstellungen löschen.
+- **Scan-Daten (Gast-Nutzung):** Wenn du die App ohne Konto im Gast-Modus nutzt, werden deine Scan-Ergebnisse in einer temporären Sitzung für maximal 24 Stunden gespeichert und danach automatisch und unwiderruflich von unseren Systemen gelöscht.
+- **Absturzberichte (Sentry):** Sofern du in die Übermittlung von Absturzberichten eingewilligt hast, werden die Fehlerprotokolle bei unserem Partner Sentry für maximal 90 Tage gespeichert und danach automatisch gelöscht.
+- **Protokolle von System-E-Mails (Resend):** Versandprotokolle von System-E-Mails (z. B. Bestätigungen über eine Account-Löschung) werden zur Fehleranalyse und zum Nachweis der Zustellung für 30 Tage gespeichert und im Anschluss automatisch gelöscht.
+
+
+## 6. Deine Rechte
+
+Du hast folgende Rechte bezüglich deiner personenbezogenen Daten:
+
+- **Auskunft** (Art. 15 DSGVO): Du kannst jederzeit erfahren, welche Daten wir über dich gespeichert haben.
+- **Berichtigung** (Art. 16 DSGVO): Du kannst unrichtige Daten korrigieren lassen.
+- **Löschung** (Art. 17 DSGVO): Du kannst die Löschung deiner Daten verlangen. In der App kannst du dein Konto und alle zugehörigen Daten direkt unter **Profil → Account löschen** vollständig und dauerhaft löschen.
+- **Einschränkung** (Art. 18 DSGVO): Du kannst die Verarbeitung deiner Daten einschränken.
+- **Datenübertragbarkeit** (Art. 20 DSGVO): Du kannst deine Daten in einem gängigen Format herausverlangen.
+- **Widerspruch** (Art. 21 DSGVO): Du kannst der Verarbeitung widersprechen, soweit sie auf berechtigtem Interesse beruht.
+- **Widerruf** einer erteilten Einwilligung (z. B. Standort): jederzeit in den App-Einstellungen.
+
+Zur Ausübung deiner Rechte wende dich an: **pferdesammler@modern-its.de**
+
+Du hast außerdem das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist in der Regel die Behörde deines Wohnorts.
+
+---
+
+## 7. Datensicherheit
+
+Alle Verbindungen zwischen der App und unseren Servern sind **SSL/TLS-verschlüsselt**. Authentifizierungstoken werden sicher auf deinem Gerät gespeichert (Android Keystore via `expo-secure-store`). Wir haben technische und organisatorische Maßnahmen getroffen, um deine Daten vor unbefugtem Zugriff zu schützen.
+
+---
+
+## 8. Kinder und Jugendliche (Mindestalter)
+
+Die Nutzung der App und die Registrierung eines Nutzerkontos ist ausschließlich Personen gestattet, die das 16. Lebensjahr vollendet haben.
+
+Personen unter 16 Jahren ist die Nutzung der App – einschließlich der Gast-Nutzung, der Registrierung eines Kontos, der KI-gestützten Fotoanalyse sowie der standortbezogenen Funktionen – nicht gestattet. Wir erheben und verarbeiten nicht wissentlich personenbezogene Daten von Kindern und Jugendlichen unter 16 Jahren.
+
+Altersabfrage beim ersten App-Start: Bevor die App zum ersten Mal genutzt werden kann, erfolgt eine einmalige Abfrage des Geburtsjahres. Das Geburtsjahr selbst wird nicht auf unseren Servern gespeichert, sondern dient rein lokal auf dem Gerät der Überprüfung, ob das Mindestalter von 16 Jahren erreicht ist. Ergibt die Abfrage, dass der Nutzer unter 16 Jahre alt ist, wird der Zugriff auf die App technisch blockiert. Bei der Registrierung eines Kontos muss der Nutzer zudem aktiv bestätigen, dass er mindestens 16 Jahre alt ist.
+
+Falls wir erfahren, dass sich ein Nutzer unter 16 Jahren entgegen dieser Bestimmung registriert hat oder die App nutzt, werden wir das entsprechende Nutzerkonto sowie alle dazugehörigen Daten unverzüglich sperren und dauerhaft löschen. Wenn du vermutest, dass ein Kind unter 16 Jahren unsere App nutzt, wende dich bitte an uns unter: pferdesammler@modern-its.de
+
+
+---
+
+## 9. Änderungen dieser Datenschutzerklärung
+
+Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen (z. B. bei neuen App-Funktionen oder rechtlichen Änderungen). Die aktuelle Version ist stets unter der in der App verlinkten URL abrufbar. Über wesentliche Änderungen werden wir dich informieren.
+
+---
+
+## 10. Kontakt Datenschutz
+
+Bei Fragen zum Datenschutz in der Pferdesammler-App:
+
+**Modern IT Services UG (haftungsbeschränkt)**  
+E-Mail: pferdesammler@modern-its.de  
+Gewerbestr. 13, 82064 Straßlach-Dingharting
+
+---
+
+*Letzte Aktualisierung: Mai 2026*
+
+
