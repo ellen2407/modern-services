@@ -14,16 +14,17 @@ const PferdeSammlerNutzungsbedingungen: React.FC = () => {
           Pferdesammler App
         </h1>
         <p className="text-[#31e9e9] font-bold text-xl mb-8 tracking-wide">
-          AGB &amp; Datenschutz
+          AGB, Datenschutz &amp; Konto löschen
         </p>
 
         {/* ── INHALTSVERZEICHNIS ───────────────────────────────────────── */}
         <div className="mb-12 p-6 border border-gray-100 rounded-xl bg-gray-50">
           <p className="text-gray-600 text-sm mb-4 leading-relaxed">
             Hier finden Sie die rechtlichen Informationen zur Pferdesammler-App –
-            die Allgemeinen Geschäftsbedingungen sowie die Datenschutzerklärung.
+            die Allgemeinen Geschäftsbedingungen, die Datenschutzerklärung sowie
+            die Anleitung zur Konto-Löschung.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
             <button
               onClick={() => scrollTo('agb')}
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#31e9e9] text-[#2d2d2d] font-semibold text-sm hover:bg-[#31e9e9]/10 transition-colors text-left"
@@ -37,6 +38,13 @@ const PferdeSammlerNutzungsbedingungen: React.FC = () => {
             >
               <span className="text-[#31e9e9] font-bold">🔒</span>
               Datenschutzerklärung
+            </button>
+            <button
+              onClick={() => scrollTo('konto-loeschen')}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#31e9e9] text-[#2d2d2d] font-semibold text-sm hover:bg-[#31e9e9]/10 transition-colors text-left"
+            >
+              <span className="text-[#31e9e9] font-bold">🗑</span>
+              Konto löschen
             </button>
           </div>
         </div>
@@ -752,6 +760,157 @@ const PferdeSammlerNutzungsbedingungen: React.FC = () => {
                 Gewerbestr. 13, 82064 Straßlach-Dingharting
               </p>
               <p className="mt-4 text-sm italic">Letzte Aktualisierung: Mai 2026</p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════════════════════ */}
+        {/* BLOCK 3: KONTO LÖSCHEN                                        */}
+        {/* ══════════════════════════════════════════════════════════════ */}
+        <div className="pt-16 mt-16 border-t-2 border-gray-100">
+          <h2 id="konto-loeschen" className="text-2xl font-bold mb-8 text-[#2d2d2d] tracking-tight scroll-mt-8">
+            Konto löschen
+          </h2>
+          <div className="space-y-8 text-gray-700 leading-relaxed">
+
+            {/* Anbieter */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-3 border-b border-[#31e9e9] inline-block">
+                Anbieter
+              </h3>
+              <p className="mt-2">
+                Modern IT Services UG (haftungsbeschränkt)<br />
+                Kontakt:{" "}
+                <a href="mailto:pferdesammler@modern-its.de" className="text-[#31e9e9] hover:underline">
+                  pferdesammler@modern-its.de
+                </a>
+              </p>
+            </div>
+
+            {/* 1 */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                1. Löschung in der App (empfohlen)
+              </h3>
+              <p>Registrierte Nutzer (Free und Premium) können ihr Konto selbst in der App löschen:</p>
+              <ol className="list-decimal pl-5 mt-2 space-y-1">
+                <li>App öffnen und anmelden</li>
+                <li>Tab „Profil" (unten rechts)</li>
+                <li>„Account löschen" auswählen</li>
+                <li>Hinweise lesen und bestätigen</li>
+                <li>
+                  Identität bestätigen:
+                  <ul className="list-disc pl-5 mt-1 space-y-1">
+                    <li>bei E-Mail-Login: Passwort eingeben</li>
+                    <li>bei Google-Login: erneute Bestätigung über Google</li>
+                  </ul>
+                </li>
+                <li>Finale Bestätigung mit Checkbox und „Endgültig löschen"</li>
+              </ol>
+              <p className="mt-2">
+                Nach erfolgreicher Löschung erhältst du – sofern technisch möglich – eine
+                Bestätigungs-E-Mail an deine zuletzt hinterlegte Adresse.
+              </p>
+            </div>
+
+            {/* 2 */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                2. Löschung ohne installierte App
+              </h3>
+              <p>
+                Wenn du die App nicht mehr nutzen kannst, sende eine E-Mail an{" "}
+                <a href="mailto:pferdesammler@modern-its.de" className="text-[#31e9e9] hover:underline">
+                  pferdesammler@modern-its.de
+                </a>{" "}
+                von der mit dem Konto verknüpften E-Mail-Adresse. Wir bearbeiten deinen
+                Löschantrag gemäß Art. 17 DSGVO.
+              </p>
+            </div>
+
+            {/* 3 */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                3. Was bei der Kontolöschung gelöscht wird
+              </h3>
+              <p>In unseren Systemen werden u. a. gelöscht:</p>
+              <ul className="list-disc pl-5 mt-2 space-y-2">
+                <li>Nutzerkonto und Anmeldedaten (E-Mail, Passwort-Hash, Google-Verknüpfung)</li>
+                <li>Profildaten (z. B. Nutzername, Premium-Status)</li>
+                <li>
+                  Sammlungs- und Scan-Einträge in unserer Datenbank (inkl. zugehöriger Metadaten
+                  wie Rasse, Zeitstempel, Standortangaben)
+                </li>
+                <li>
+                  Lokal auf deinem Gerät gespeicherte App-Daten (Cache, Einstellungen, lokal
+                  gespeicherte Fotos), soweit die Löschung in der App erfolgreich abgeschlossen
+                  wurde
+                </li>
+              </ul>
+              <p className="mt-2 text-sm italic">
+                Hinweis zu Fotos: Pferdefotos werden in der aktuellen App-Version primär lokal auf
+                deinem Gerät gespeichert, nicht als dauerhafte Bilddatei auf unseren Servern.
+              </p>
+            </div>
+
+            {/* 4 */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                4. Was ggf. vorübergehend verbleibt
+              </h3>
+              <p>
+                Einzelne Daten können aus technischen oder rechtlichen Gründen zeitlich begrenzt
+                weiterverarbeitet werden:
+              </p>
+              <ul className="list-disc pl-5 mt-2 space-y-3">
+                <li>
+                  <strong>Versandprotokolle von System-E-Mails (Resend):</strong> Diese werden zur
+                  Fehleranalyse und zum Nachweis der Zustellung für maximal 30 Tage gespeichert
+                  und im Anschluss automatisch gelöscht.
+                </li>
+                <li>
+                  <strong>Absturzberichte (Sentry):</strong> Sofern du in die Übermittlung von
+                  Absturzberichten ausdrücklich eingewilligt hast, werden die Fehlerprotokolle bei
+                  unserem Partner Sentry für maximal 90 Tage gespeichert und danach automatisch
+                  gelöscht.
+                </li>
+                <li>
+                  <strong>Abrechnungs- und Transaktionsdaten (Google Play / RevenueCat):</strong>{" "}
+                  Daten im Zusammenhang mit Zahlungen und Abonnements können bei den jeweiligen
+                  Zahlungsdienstleistern gemäß deren eigenen Aufbewahrungsrichtlinien und
+                  gesetzlichen Pflichten weiterhin gespeichert werden.
+                </li>
+              </ul>
+              <p className="mt-2">
+                Gesetzliche Aufbewahrungspflichten (z. B. aus dem Handels- oder Steuerrecht)
+                bleiben von der Kontolöschung unberührt und können eine längere Speicherung
+                einzelner Daten erforderlich machen.
+              </p>
+            </div>
+
+            {/* 5 */}
+            <div>
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                5. Wichtiger Hinweis zu Premium-Abos
+              </h3>
+              <p>
+                Die Kontolöschung kündigt ein laufendes Google-Play-Abo{" "}
+                <strong>nicht automatisch</strong>. Bitte kündige ein aktives Abo vorher in den
+                Google-Play-Abo-Einstellungen. In der App weist dich ein Hinweis darauf hin.
+              </p>
+            </div>
+
+            {/* 6 */}
+            <div className="pb-12">
+              <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">
+                6. Gast-Nutzung (ohne Konto)
+              </h3>
+              <p>
+                Ohne Registrierung werden Scan-Ergebnisse in einer temporären Sitzung gespeichert
+                und nach maximal 24 Stunden automatisch gelöscht. Gast-Nutzer können lokale Daten
+                über „Alle Daten löschen" im Profil entfernen.
+              </p>
             </div>
 
           </div>
