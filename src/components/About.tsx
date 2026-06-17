@@ -1,8 +1,25 @@
 
-import React from 'react';
-import { CheckCircle, Shield, Code, Cpu, User } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { CheckCircle, Shield, Code, Cpu, User, X } from 'lucide-react';
 
 const About: React.FC = () => {
+  const [expandedImage, setExpandedImage] = useState<{ src: string; name: string } | null>(null);
+
+  useEffect(() => {
+    if (!expandedImage) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setExpandedImage(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [expandedImage]);
   const certificates = [
     { icon: <CheckCircle className="text-[#31e9e9]" size={20} />, text: 'Berater für Unternehmensnachfolge' },
     { icon: <Shield className="text-[#31e9e9]" size={20} />, text: 'Projektmanagement klassisch, agil & hybrid' },
@@ -12,7 +29,7 @@ const About: React.FC = () => {
 
   const teamMembers = [
     { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge' },
-    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge' },
+    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge', image: '/images/team/ellen-haefele.png' },
     { name: 'Maximilian Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester' },
   ];
 
@@ -53,8 +70,23 @@ const About: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="p-8 border border-gray-100 hover:border-[#52e3fe] transition-all bg-white flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-[#31e9e9]">
-                  <User size={32} />
+                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-[#31e9e9] overflow-hidden">
+                  {member.image ? (
+                    <button
+                      type="button"
+                      onClick={() => setExpandedImage({ src: member.image!, name: member.name })}
+                      className="w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#31e9e9] focus-visible:ring-offset-2 rounded-full"
+                      aria-label={`Porträtfoto von ${member.name} vergrößern`}
+                    >
+                      <img
+                        src={member.image}
+                        alt={`Porträtfoto von ${member.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ) : (
+                    <User size={32} />
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">{member.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{member.role}</p>
@@ -63,6 +95,31 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {expandedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6"
+          onClick={() => setExpandedImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Vergrößertes Porträtfoto von ${expandedImage.name}`}
+        >
+          <button
+            type="button"
+            onClick={() => setExpandedImage(null)}
+            className="absolute top-6 right-6 p-2 text-white/80 hover:text-white transition-colors"
+            aria-label="Vergrößertes Bild schließen"
+          >
+            <X size={28} />
+          </button>
+          <img
+            src={expandedImage.src}
+            alt={`Porträtfoto von ${expandedImage.name}`}
+            className="max-h-[85vh] max-w-[min(90vw,32rem)] w-auto rounded-lg shadow-2xl object-contain"
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
