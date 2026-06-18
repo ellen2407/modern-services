@@ -28,9 +28,9 @@ const About: React.FC = () => {
   ];
 
   const teamMembers = [
-    { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge' },
+    { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge', image: '/images/team/heinz-rabauer.jpg' },
     { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge', image: '/images/team/ellen-haefele.png' },
-    { name: 'Maximilian Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester' },
+    { name: 'Maximilian Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester', image: '/images/team/maximilian-rabauer.png' },
   ];
 
   return (
@@ -115,7 +115,7 @@ const About: React.FC = () => {
           <img
             src={expandedImage.src}
             alt={`Porträtfoto von ${expandedImage.name}`}
-            className="max-h-[85vh] max-w-[min(90vw,32rem)] w-auto rounded-lg shadow-2xl object-contain"
+            className="max-h-[min(80vh,20rem)] max-w-[min(90vw,20rem)] w-auto h-auto rounded-lg shadow-2xl object-contain"
             onClick={(event) => event.stopPropagation()}
           />
         </div>
