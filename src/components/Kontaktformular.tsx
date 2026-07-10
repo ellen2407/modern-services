@@ -49,7 +49,7 @@ const Kontaktformular: React.FC = () => {
           <p className="text-lg text-gray-600 leading-relaxed mt-6">
             Ihre Ellen Häfele
             <br />
-            Beraterin für Unternehmensnachfolge
+            Beraterin für Unternehmensnachfolge (IHK)
           </p>
         </div>
       </section>

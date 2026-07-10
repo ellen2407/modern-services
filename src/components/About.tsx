@@ -21,15 +21,15 @@ const About: React.FC = () => {
     };
   }, [expandedImage]);
   const certificates = [
-    { icon: <CheckCircle className="text-[#31e9e9]" size={20} />, text: 'Berater für Unternehmensnachfolge' },
+    { icon: <CheckCircle className="text-[#31e9e9]" size={20} />, text: 'Berater für Unternehmensnachfolge (IHK)' },
     { icon: <Shield className="text-[#31e9e9]" size={20} />, text: 'Projektmanagement klassisch, agil & hybrid' },
     { icon: <Cpu className="text-[#31e9e9]" size={20} />, text: 'Prozessanalyse & -automatisierung: UIPath certified RPA Developer' },
     { icon: <Code className="text-[#31e9e9]" size={20} />, text: 'ISTQB Certified Advanced Level Testmanager' },
   ];
 
   const teamMembers = [
-    { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge', image: '/images/team/heinz-rabauer.jpg' },
-    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge', image: '/images/team/ellen-haefele.png' },
+    { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge (IHK)', image: '/images/team/heinz-rabauer.jpg' },
+    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge (IHK)', image: '/images/team/ellen-haefele.png' },
     { name: 'Maximilian Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester', image: '/images/team/maximilian-rabauer.png' },
   ];
 
