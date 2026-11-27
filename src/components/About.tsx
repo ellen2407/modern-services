@@ -28,8 +28,8 @@ const About: React.FC = () => {
   ];
 
   const teamMembers = [
-    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge (IHK)', image: '/images/team/ellen-haefele.png' },
-    { name: 'Maximilia Rabauer', role: 'Bachelor of Science Wirtschaftsinformatik, IT- Projektmanager mit Qualitätssicherungsfokus', image: '/images/team/maximilian-rabauer.png' },
+    { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, ZertifizierteBerater für Unternehmensnachfolge (IHK)', image: '/images/team/ellen-haefele.png' },
+    { name: 'Maximilia Rabauer', role: 'Bachelor of Science Wirtschaftsinformatik, Hybrid-agiler IT- Projektmanager mit Qualitätssicherungsfokus', image: '/images/team/maximilian-rabauer.png' },
   ];
 
   return (
