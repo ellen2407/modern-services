@@ -70,7 +70,7 @@ const PferdeSammlerNutzungsbedingungen: React.FC = () => {
               Deutschland
             </p>
             <p className="mt-2">
-              Vertreten durch die Geschäftsführer: Maximilian Rabauer, Heinz Rabauer<br />
+              Vertreten durch die Geschäftsführerin: Maximilia Rabauer<br />
               Handelsregister: HRB 298879, Amtsgericht München<br />
               Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE350658306<br />
               Kontakt: pferdesammler@modern-its.de

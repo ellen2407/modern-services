@@ -28,9 +28,8 @@ const About: React.FC = () => {
   ];
 
   const teamMembers = [
-    { name: 'Heinz Rabauer', role: 'Master of Science in BWL, Finanzexperte und Berater für Unternehmensnachfolge (IHK)', image: '/images/team/heinz-rabauer.jpg' },
     { name: 'Ellen Häfele', role: 'Bachelor of Arts Sozialwirtschaft, Berater für Unternehmensnachfolge (IHK)', image: '/images/team/ellen-haefele.png' },
-    { name: 'Maximilian Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester', image: '/images/team/maximilian-rabauer.png' },
+    { name: 'Maximilia Rabauer', role: 'B.Sc. Wirtschaftsinformatik, Projektmanager & Softwaretester', image: '/images/team/maximilian-rabauer.png' },
   ];
 
   return (
@@ -67,7 +66,7 @@ const About: React.FC = () => {
           <h2 className="text-3xl font-bold mb-12 text-[#2d2d2d] flex items-center gap-4">
             <span className="h-[2px] w-12 bg-[#31e9e9]"></span> Unser Team
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="p-8 border border-gray-100 hover:border-[#52e3fe] transition-all bg-white flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-[#31e9e9] overflow-hidden">

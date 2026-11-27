@@ -25,8 +25,8 @@ const Legal: React.FC = () => {
           
           {/* Vertretung */}
           <div>
-            <h2 className="text-xl font-bold text-[#2d2d2d] mb-2">Vertreten durch die Geschäftsführer</h2>
-            <p>Maximilian Rabauer, Heinz Rabauer</p>
+            <h2 className="text-xl font-bold text-[#2d2d2d] mb-2">Vertreten durch die Geschäftsführerin</h2>
+            <p>Maximilia Rabauer</p>
           </div>
 
           {/* Kontakt */}
@@ -52,8 +52,8 @@ const Legal: React.FC = () => {
             <h2 className="text-xl font-bold text-[#2d2d2d] mb-2">Redaktionell verantwortlich</h2>
             <p>
               Modern IT Services UG (haftungsbeschränkt)<br />
-              Vertreten durch die Geschäftsführer:<br />
-              Maximilian Rabauer, Heinz Rabauer<br />
+              Vertreten durch die Geschäftsführerin:<br />
+              Maximilia Rabauer<br />
               Gewerbestr. 13<br />
               82064 Straßlach-Dingharting<br />
               Deutschland
